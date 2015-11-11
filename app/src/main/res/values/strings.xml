@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Tinderr</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="tinderr">Tinderr</string>
+
+    <string-array name="friend_names">
+        <item>Hasine</item>
+        <item>Walla</item>
+        <item>Harpreet</item>
+        <item>Amandeep</item>
+        <item>Yekta</item>
+        <item>Natalie</item>
+    </string-array>
+
+    <string-array name="friend_full_names">
+        <item>Hasine Efetürk</item>
+        <item>Walla Smesseim</item>
+        <item>Harpreet Kaur-Singh</item>
+        <item>Amandeep Singh</item>
+        <item>Yekta Valikhani</item>
+        <item>Natalie Ching-Yong</item>
+    </string-array>
+
+    <string-array name="friend_details">
+        <item>Hasine Efetürk was born on 9 February 1992, she comes from a Turkish family of five
+            children. She went to the high school Calandlyceum, graduated the Secondary school at
+            2008 and graduated the Secondary modern school at 2011. She is now studying Mathematics
+            at the University of Amsterdam. She had one long relationship of six years and she is
+            single by now.</item>
+        <item>Walla Smesseim was born on September 7, 1993, she comes from an Iraq family of four
+            children. She has two older sisters, which are both very smart and she also has one
+            younger brother. She went to the high school Calandlyceum and graduated the Secondary
+            modern school at 2010. She earned her Bachelor title in 2015 at the UU (Utrecht University)
+            where she studied Farmacie. She is now doing the master Farmacie as well at the UU.
+            She never had a relationship and is interested in something serious. </item>
+        <item>Harpreet Kaur_Singh was born on October 31, 1992, she comes from an Indian family of
+            three children. She has two older brothers. One of them is already married. She went to
+            the high school Calandlyceum. She graduated the Secondary modern school at 2010. After
+            that she earned her Bachelor title in 2015 at the VU(free University)where she studied
+            Health and Life. She is now doing the master Health Sciences in Rotterdam.
+            She has looked around but never found the right one.</item>
+        <item>Amandeep Singh was born on May 4, 1993, she comes from an Indian family of three children.
+            She is the oldest one. She went to the high school Calandlyceum and graduated the Secondary
+            modern school at 2010. She is now in her last year of her bachelor Econometrics. When
+            she finishes her study, she wants to find love and marry soon.</item>
+        <item>Yekta Valikhani was born on April 4, 1993, she comes from an Iranian family and is the
+            only child in the family. She studied Farmacie as well with Walla but after a year, she
+            wanted to do something else and choose to study Medicines at the University of Amsterdam.
+            She is now in the third year of her bachelor and wants to become a doctor. She has had
+            several crushes but it all finished before it was started. She is searching for someone
+            to have a good time with.</item>
+        <item>Natalie Ching-Yong was born on January 29, 1993, she comes from a Surinamese Czech
+            family. She just has one younger sister. She also went to the high school Calandlyceym and
+            graduated the Secondary modern school at 2010. She is now in her first year of her bachelor
+            Nutrition and Health. She studies at WU, Wageningen University. She has several flows and
+            also a few crushes but she never had a serious relationship.</item>
+    </string-array>
+</resources>
