@@ -1,8 +1,15 @@
 <resources>
     <string name="app_name">Tinderr</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_details">DetailsActivity</string>
+    <string name="title_activity_details">Details Activity</string>
     <string name="tinderr">Tinderr</string>
+    <string name="Hasine">Hasine</string>
+    <string name="Walla">Walla</string>
+    <string name="Harpreet">Harpreet</string>
+    <string name="Amandeep">Amandeep</string>
+    <string name="Yekta">Yekta</string>
+    <string name="Natalie">Natalie</string>
+    <string name="infotext">Click on an eligible single user to learn more and see if you are compatible for a date!</string>
 
     <string-array name="friend_names">
         <item>Hasine</item>
@@ -56,4 +63,6 @@
             Nutrition and Health. She studies at WU, Wageningen University. She has several flows and
             also a few crushes but she never had a serious relationship.</item>
     </string-array>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="title_activity_thirdactivity">thirdactivity</string>
 </resources>
