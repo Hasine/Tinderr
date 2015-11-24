@@ -13,156 +13,27 @@
     tools:showIn="@layout/activity_main_activity_tinder"
     tools:context=".MainActivityTinder"
     android:orientation="vertical">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="10sp"
         android:paddingTop="10sp"
         android:text="@string/infotext"
+        android:id="@+id/info"
         android:textColor="#F00"
         android:textSize="18sp"
         android:textStyle="bold"/>
 
-    <TableLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:shrinkColumns="*"
-        android:stretchColumns="*"
-        android:weightSum="2">
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="90dp"
+        android:numColumns="2"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center" />
 
-        <TableRow>
-            <RelativeLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:contentDescription="@string/Hasine"
-                    android:layout_height="100sp"
-                    android:layout_width="wrap_content"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/hasineklein"
-                    android:id="@+id/hasineklein"
-                    android:onClick="hasineclicked" />
-                <TextView
-                    android:id="@+id/hasinekleinLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/hasineklein"
-                    android:layout_centerInParent="true"
-                    android:paddingBottom="10sp"
-                    android:paddingTop="10sp"
-                    android:text="@string/Hasine"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_weight="1">
-                <ImageView
-                    android:contentDescription="@string/Walla"
-                    android:layout_height="100sp"
-                    android:layout_width="wrap_content"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/wallaklein"
-                    android:id="@+id/wallaklein"
-                    android:onClick="wallaclick"/>
-                <TextView
-                    android:id="@+id/wallakleinLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/wallaklein"
-                    android:layout_centerInParent="true"
-                    android:paddingBottom="10sp"
-                    android:paddingTop="10sp"
-                    android:text="@string/Walla"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
-            </RelativeLayout>
-        </TableRow>
-
-        <TableRow>
-            <RelativeLayout>
-                <ImageView
-                    android:contentDescription="@string/Harpreet"
-                    android:layout_height="100sp"
-                    android:layout_width="wrap_content"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/harpreetklein"
-                    android:id="@+id/harpreetklein" />
-                <TextView
-                    android:id="@+id/harpreetkleinLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/harpreetklein"
-                    android:layout_centerInParent="true"
-                    android:paddingBottom="10sp"
-                    android:paddingTop="10sp"
-                    android:text="@string/Harpreet"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
-            </RelativeLayout>
-            <RelativeLayout>
-                <ImageView
-                    android:contentDescription="@string/Amandeep"
-                    android:layout_height="100sp"
-                    android:layout_width="wrap_content"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/amandeepklein"
-                    android:id="@+id/amandeepklein"/>
-                <TextView
-                    android:id="@+id/amandeepkleinLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/amandeepklein"
-                    android:layout_centerInParent="true"
-                    android:paddingBottom="10sp"
-                    android:paddingTop="10sp"
-                    android:text="@string/Amandeep"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
-            </RelativeLayout>
-        </TableRow>
-
-        <TableRow>
-            <RelativeLayout>
-                <ImageView
-                    android:contentDescription="@string/Yekta"
-                    android:layout_height="100sp"
-                    android:layout_width="wrap_content"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/yektaklein"
-                    android:id="@+id/yektaklein"/>
-                <TextView
-                    android:id="@+id/yektakleinLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/yektaklein"
-                    android:layout_centerInParent="true"
-                    android:paddingBottom="10sp"
-                    android:paddingTop="10sp"
-                    android:text="@string/Yekta"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
-            </RelativeLayout>
-            <RelativeLayout>
-                <ImageView
-                    android:contentDescription="@string/Natalie"
-                    android:layout_height="100sp"
-                    android:layout_width="wrap_content"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/natalieklein"
-                    android:id="@+id/natalieklein"/>
-                <TextView
-                    android:id="@+id/nataliekleinLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/natalieklein"
-                    android:layout_centerInParent="true"
-                    android:paddingBottom="10sp"
-                    android:paddingTop="10sp"
-                    android:text="@string/Natalie"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
-            </RelativeLayout>
-        </TableRow>
-    </TableLayout>
 </LinearLayout>

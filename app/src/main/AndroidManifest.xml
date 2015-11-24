@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hasine.tinderr">
 
     <application
@@ -21,8 +22,7 @@
         </activity>
         <activity
             android:name=".SecondActivity"
-            android:label="@string/title_activity_second"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/title_activity_second">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivityTinder" />

@@ -1,47 +1,79 @@
 package com.example.hasine.tinderr;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.RatingBar;
-import android.widget.RatingBar.OnRatingBarChangeListener;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.lang.reflect.Array;
 
 public class SecondActivity extends AppCompatActivity {
 
-    private TextView txtRatingValue;
+    public float rate,r_0,r_1,r_2,r_3,r_4,r_5;
+    private String name;
+    private RatingBar ratingBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        addListenerOnRatingBar();
+        android.support.v7.app.ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
 
-//        Intent intent = getIntent();
-//        String extra = intent.getExtra("name");
-    }
-    public void addListenerOnRatingBar() {
 
-        RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar);
-        txtRatingValue = (TextView) findViewById(R.id.txtRatingValue);
+        //      get info from intent
+        Intent intent = getIntent();
+        name = intent.getStringExtra("name");
+        String detail = intent.getStringExtra("detail");
+        int image = intent.getIntExtra("image", 1);
 
-        //if rating value is changed,
-        //display the current rating value in the result (textview) automatically
-        ratingBar.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
+        ImageView imageView2 = (ImageView) findViewById(R.id.imageView2);
+        imageView2.setImageResource(image);
+        TextView textView2 = (TextView) findViewById(R.id.textView2);
+        textView2.setText(detail);
+
+
+        // Add the following lines to the end of the onCreate method:
+        ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+
+            @Override
             public void onRatingChanged(RatingBar ratingBar, float rating,
                                         boolean fromUser) {
-
-                txtRatingValue.setText(String.valueOf(rating));
-
+                //write the rating back to the data source :]
+                rate = rating;
+                SharedPreferences prefs = getPreferences(MODE_PRIVATE);
+                SharedPreferences.Editor Edit = prefs.edit();
+                Edit.putFloat(name, rate);
+                Edit.apply();
             }
         });
+
+        SharedPreferences prefs = getPreferences(MODE_PRIVATE);
+        float r = prefs.getFloat(name, 0);
+        RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+        if (r != 0) {
+            ratingBar.setRating(r);
+        }
     }
 
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if(id==android.R.id.home){
+            // get rating from sharedPreferences
+            SharedPreferences prefs = getPreferences(MODE_PRIVATE);
+            float r = prefs.getFloat(name,0);
+
+            Toast.makeText(this, "You rated " + name + ": " + r, Toast.LENGTH_LONG).show();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
