@@ -29,7 +29,6 @@ public class CustomAdapter extends BaseAdapter{
         imageId=friendImages;
         inflater = ( LayoutInflater )context.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
     }
 
     @Override
